@@ -6,6 +6,10 @@
       "installationSteps": {
         "CentOS": [
           {
+            "type": "deploy",
+            "value": "Core/Utils:{{SERVER.SERVER_HOME}}/Utils"
+          },
+          {
             "type": "skipCondition",
             "value": "docker --version"
           },
