@@ -1,6 +1,6 @@
 {
   "includes": [
-    "Definitions/Software/Redis/Centos/Redis.json",
-    "Definitions/Software/Redis/Ubuntu/Redis.json"
+    "Centos/Redis.json",
+    "Ubuntu/Redis.json"
   ]
 }
