@@ -1,4 +1,18 @@
 {
+  "variables": {
+    "SERVER": {
+      "CERTIFICATION": {
+        "COUNTRY": "{{SERVER.INFO.COUNTRY}}",
+        "PROVINCE": "{{SERVER.INFO.PROVINCE}}",
+        "CITY": "{{SERVER.INFO.CITY}}",
+        "ORGANISATION": "{{SERVER.INFO.ORGANISATION}}",
+        "EMAIL": "{{SERVER.INFO.EMAIL}}",
+        "DEPARTMENT": "{{SERVER.INFO.DEPARTMENT}}",
+        "CERTIFICATES": "/etc/ssl/certs",
+        "CA_BUNDLE": "ca-certificates.crt"
+      }
+    }
+  },
   "software": [
     {
       "name": "Certification Authority",
