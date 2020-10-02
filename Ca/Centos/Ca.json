@@ -1,8 +1,14 @@
 {
-  "variables": {
-    "SERVER": {
-      "CERTIFICATION": {
-        "CA_BUNDLE": "ca-bundle.crt"
+  "overrides": {
+    "os": {
+      "centOS": {
+        "variables": {
+          "SERVER": {
+            "CERTIFICATION": {
+              "CA_BUNDLE": "ca-bundle.crt"
+            }
+          }
+        }
       }
     }
   },
