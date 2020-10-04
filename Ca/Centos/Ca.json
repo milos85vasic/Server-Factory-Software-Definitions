@@ -1,7 +1,7 @@
 {
   "overrides": {
     "os": {
-      "centOS": {
+      "CentOS": {
         "variables": {
           "SERVER": {
             "CERTIFICATION": {
