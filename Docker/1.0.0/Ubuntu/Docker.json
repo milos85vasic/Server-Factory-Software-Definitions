@@ -7,7 +7,7 @@
         "Ubuntu": [
           {
             "type": "deploy",
-            "value": "Core/Utils:{{SERVER.SERVER_HOME}}/Utils"
+            "value": "{{SYSTEM.HOME}}/Core/Utils:{{SERVER.SERVER_HOME}}/Utils"
           },
           {
             "type": "skipCondition",
