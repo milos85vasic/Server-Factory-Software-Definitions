@@ -52,7 +52,7 @@
           },
           {
             "type": "deploy",
-            "value": "Definitions/Software/Ca/Configuration:{{SERVER.CERTIFICATION.HOME}}"
+            "value": "this@Configuration:{{SERVER.CERTIFICATION.HOME}}"
           },
           {
             "type": "command",
