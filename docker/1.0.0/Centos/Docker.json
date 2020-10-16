@@ -26,6 +26,10 @@
             "value": "yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo"
           },
           {
+            "type": "command",
+            "value": "yum erase -y podman buildah"
+          },
+          {
             "type": "packages",
             "value": "docker-ce, docker-ce-cli, containerd.io, telnet"
           },
