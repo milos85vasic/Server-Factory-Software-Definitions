@@ -50,6 +50,22 @@
             "value": "systemctl enable docker"
           },
           {
+            "type": "command",
+            "value": "systemctl enable firewalld"
+          },
+          {
+            "type": "command",
+            "value": "systemctl start firewalld"
+          },
+          {
+            "type": "command",
+            "value": "firewall-cmd --permanent --zone=trusted --add-interface=docker0"
+          },
+          {
+            "type": "command",
+            "value": "firewall-cmd --reload"
+          },
+          {
             "type": "reboot",
             "value": "120"
           },
