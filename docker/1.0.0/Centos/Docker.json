@@ -27,11 +27,15 @@
           },
           {
             "type": "packagesErase",
-            "value": "podman buildah"
+            "value": "podman, buildah"
           },
           {
             "type": "packages",
             "value": "docker-ce, docker-ce-cli, containerd.io, telnet"
+          },
+          {
+            "type": "command",
+            "value": "setenforce 0"
           },
           {
             "type": "command",
@@ -40,10 +44,6 @@
           {
             "type": "command",
             "value": "docker run hello-world"
-          },
-          {
-            "type": "command",
-            "value": "setenforce 0"
           },
           {
             "type": "command",
