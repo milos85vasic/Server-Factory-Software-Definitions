@@ -26,16 +26,24 @@
             "value": "yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo"
           },
           {
+            "type": "command",
+            "value": "setenforce 0"
+          },
+          {
             "type": "packagesErase",
-            "value": "podman, buildah"
+            "value": "podman, buildah, nftables"
           },
           {
             "type": "packages",
-            "value": "docker-ce, docker-ce-cli, containerd.io, telnet"
+            "value": "iptables, iptables-services, docker-ce, docker-ce-cli, containerd.io, telnet"
           },
           {
             "type": "command",
-            "value": "setenforce 0"
+            "value": "systemctl enable iptables"
+          },
+          {
+            "type": "command",
+            "value": "systemctl start iptables"
           },
           {
             "type": "command",
@@ -48,22 +56,6 @@
           {
             "type": "command",
             "value": "systemctl enable docker"
-          },
-          {
-            "type": "command",
-            "value": "systemctl enable firewalld"
-          },
-          {
-            "type": "command",
-            "value": "systemctl start firewalld"
-          },
-          {
-            "type": "command",
-            "value": "firewall-cmd --permanent --zone=trusted --add-interface=docker0"
-          },
-          {
-            "type": "command",
-            "value": "firewall-cmd --reload"
           },
           {
             "type": "reboot",
