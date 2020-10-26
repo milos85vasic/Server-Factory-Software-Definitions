@@ -1,6 +1,6 @@
 {
   "overrides": {
-    "os": {
+    "platform": {
       "Ubuntu": {
         "variables": {
           "SERVER": {
