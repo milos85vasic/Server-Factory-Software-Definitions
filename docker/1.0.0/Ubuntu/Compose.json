@@ -11,11 +11,11 @@
           },
           {
             "type": "command",
-            "value": "apt dist-upgrade"
+            "value": "apt dist-upgrade -y --fix-missing"
           },
           {
             "type": "command",
-            "value": "apt autoremove"
+            "value": "apt autoremove -y"
           },
           {
             "type": "packages",
