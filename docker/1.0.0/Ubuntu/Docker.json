@@ -27,7 +27,7 @@
           },
           {
             "type": "packages",
-            "value": "apt-transport-https, ca-certificates, curl, gnupg-agent, software-properties-common, lsb-core"
+            "value": "selinux-utils, apt-transport-https, ca-certificates, curl, gnupg-agent, software-properties-common, lsb-core"
           },
           {
             "type": "command",
