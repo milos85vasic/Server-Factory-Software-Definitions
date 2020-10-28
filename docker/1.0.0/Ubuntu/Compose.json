@@ -18,6 +18,10 @@
             "value": "apt upgrade -y"
           },
           {
+            "type": "command",
+            "value": "apt autoremove -y"
+          },
+          {
             "type": "packages",
             "value": "python3, python3-pip"
           },
