@@ -27,7 +27,19 @@
           },
           {
             "type": "packages",
-            "value": "selinux-utils, apt-transport-https, ca-certificates, curl, gnupg-agent, software-properties-common, lsb-core"
+            "value": "policycoreutils, selinux-utils, selinux-basics, apt-transport-https, ca-certificates, curl, gnupg-agent, software-properties-common, lsb-core"
+          },
+          {
+            "type": "command",
+            "value": "selinux-activate"
+          },
+          {
+            "type": "command",
+            "value": "selinux-config-enforcing"
+          },
+          {
+            "type": "reboot",
+            "value": "120"
           },
           {
             "type": "command",
