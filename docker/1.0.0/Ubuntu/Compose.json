@@ -11,6 +11,10 @@
           },
           {
             "type": "command",
+            "value": "apt dist-upgrade"
+          },
+          {
+            "type": "command",
             "value": "apt autoremove"
           },
           {
