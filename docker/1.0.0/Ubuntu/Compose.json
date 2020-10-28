@@ -10,6 +10,14 @@
             "value": "docker-compose --version"
           },
           {
+            "type": "command",
+            "value": "apt update -y"
+          },
+          {
+            "type": "command",
+            "value": "apt upgrade -y"
+          },
+          {
             "type": "packages",
             "value": "python3, python3-pip"
           },
