@@ -1,0 +1,57 @@
+{
+  "overrides": {
+    "platform": {
+      "Fedora": {
+        "variables": {
+          "SERVER": {
+            "CERTIFICATION": {
+              "CA_BUNDLE": "ca-bundle.crt"
+            }
+          }
+        }
+      }
+    }
+  },
+  "software": [
+    {
+      "name": "Certification Authority",
+      "version": "1.0",
+      "installationSteps": {
+        "Fedora": [
+          {
+            "type": "skipCondition",
+            "value": "test -e {{SERVER.CERTIFICATION.HOME}}"
+          },
+          {
+            "type": "packages",
+            "value": "easy-rsa"
+          },
+          {
+            "type": "command",
+            "value": "mkdir -p {{SERVER.CERTIFICATION.HOME}}"
+          },
+          {
+            "type": "command",
+            "value": "chmod 700 {{SERVER.CERTIFICATION.HOME}}"
+          },
+          {
+            "type": "command",
+            "value": "ln -s /usr/share/easy-rsa/3/* {{SERVER.CERTIFICATION.HOME}}"
+          },
+          {
+            "type": "command",
+            "value": "cd {{SERVER.CERTIFICATION.HOME}} && ./easyrsa init-pki"
+          },
+          {
+            "type": "deploy",
+            "value": "this@Configuration:{{SERVER.CERTIFICATION.HOME}}"
+          },
+          {
+            "type": "command",
+            "value": "cd {{SERVER.CERTIFICATION.HOME}} && export EASYRSA_PASSIN='pass:{{SERVER.CERTIFICATION.PASSPHRASE}}' && export EASYRSA_PASSOUT='pass:{{SERVER.CERTIFICATION.PASSPHRASE}}' && echo 'Finish' | ./easyrsa build-ca"
+          }
+        ]
+      }
+    }
+  ]
+}

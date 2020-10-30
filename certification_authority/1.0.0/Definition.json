@@ -7,6 +7,7 @@
   },
   "includes": [
     "Centos/Ca.json",
+    "Fedora/Ca.json",
     "Ubuntu/Ca.json"
   ]
 }
