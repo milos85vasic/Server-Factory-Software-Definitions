@@ -19,7 +19,7 @@
           },
           {
             "type": "packages",
-            "value": "python3-devel, libffi-devel, openssl-devel, glibc-devel, gcc, gcc-c++, make"
+            "value": "python3-devel, libffi-devel, openssl-devel, glibc-devel, gcc, gcc-c++, make, libxcrypt-compat"
           },
           {
             "type": "command",
