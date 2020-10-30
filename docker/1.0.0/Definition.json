@@ -17,6 +17,7 @@
     "Fedora/Docker.json",
     "Ubuntu/Docker.json",
     "Centos/Compose.json",
+    "Fedora/Compose.json",
     "Ubuntu/Compose.json"
   ]
 }
