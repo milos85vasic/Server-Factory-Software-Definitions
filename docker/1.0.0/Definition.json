@@ -14,8 +14,9 @@
   },
   "includes": [
     "Centos/Docker.json",
-    "Centos/Compose.json",
+    "Fedora/Docker.json",
     "Ubuntu/Docker.json",
+    "Centos/Compose.json",
     "Ubuntu/Compose.json"
   ]
 }
