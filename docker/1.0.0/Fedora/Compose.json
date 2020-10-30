@@ -41,7 +41,7 @@
           },
           {
             "type": "packages",
-            "value": "epel-release, python-pip"
+            "value": "python-pip"
           },
           {
             "type": "command",
