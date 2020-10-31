@@ -30,8 +30,16 @@
             "value": "podman, buildah, nftables"
           },
           {
+            "type": "command",
+            "value": "grubby --update-kernel=ALL --args=\"systemd.unified_cgroup_hierarchy=0\""
+          },
+          {
+            "type": "command",
+            "value": "dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo"
+          },
+          {
             "type": "packages",
-            "value": "iptables, iptables-services, moby-engine, telnet"
+            "value": "grubby, iptables, iptables-services, docker-ce, docker-ce-cli, containerd.io, telnet"
           },
           {
             "type": "command",
