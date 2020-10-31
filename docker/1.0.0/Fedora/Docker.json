@@ -23,6 +23,68 @@
           },
           {
             "type": "command",
+            "value": "sh {{SERVER.SERVER_HOME}}/Utils/setenforce.sh"
+          },
+          {
+            "type": "packagesErase",
+            "value": "podman, buildah, nftables"
+          },
+          {
+            "type": "packages",
+            "value": "iptables, iptables-services, moby-engine, telnet"
+          },
+          {
+            "type": "command",
+            "value": "systemctl enable iptables"
+          },
+          {
+            "type": "command",
+            "value": "systemctl start iptables"
+          },
+          {
+            "type": "command",
+            "value": "systemctl enable --now docker"
+          },
+          {
+            "type": "command",
+            "value": "usermod -aG docker $(whoami)"
+          },
+          {
+            "type": "command",
+            "value": "systemctl start docker"
+          },
+          {
+            "type": "command",
+            "value": "docker run --rm hello-world"
+          },
+          {
+            "type": "reboot",
+            "value": "120"
+          },
+          {
+            "type": "command",
+            "value": "docker run --rm hello-world"
+          }
+        ],
+        "Fedora_30": [
+          {
+            "type": "deploy",
+            "value": "{{SYSTEM.HOME}}/Core/Utils:{{SERVER.SERVER_HOME}}/Utils"
+          },
+          {
+            "type": "skipCondition",
+            "value": "docker --version"
+          },
+          {
+            "type": "packageGroup",
+            "value": "Development Tools"
+          },
+          {
+            "type": "packages",
+            "value": "dnf-plugins-core, device-mapper-persistent-data, lvm2"
+          },
+          {
+            "type": "command",
             "value": "dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo"
           },
           {
@@ -51,7 +113,7 @@
           },
           {
             "type": "command",
-            "value": "docker run hello-world"
+            "value": "docker run --rm hello-world"
           },
           {
             "type": "command",
@@ -63,7 +125,7 @@
           },
           {
             "type": "command",
-            "value": "docker run hello-world"
+            "value": "docker run --rm hello-world"
           }
         ]
       }

@@ -51,7 +51,7 @@
           },
           {
             "type": "command",
-            "value": "docker run hello-world"
+            "value": "docker run --rm hello-world"
           },
           {
             "type": "reboot",
@@ -59,7 +59,7 @@
           },
           {
             "type": "command",
-            "value": "docker run hello-world"
+            "value": "docker run --rm hello-world"
           }
         ]
       }
