@@ -4,7 +4,7 @@
       "name": "Docker Compose",
       "version": "1.25.4",
       "installationSteps": {
-        "CentOS": [
+        "Fedora": [
           {
             "type": "skipCondition",
             "value": "docker-compose --version"
@@ -20,36 +20,6 @@
           {
             "type": "packages",
             "value": "python3-devel, libffi-devel, openssl-devel, glibc-devel, gcc, gcc-c++, make, libxcrypt-compat"
-          },
-          {
-            "type": "command",
-            "value": "curl -L \"https://github.com/docker/compose/releases/download/{{DOCKER.DOCKER_COMPOSE_VERSION}}/docker-compose-$(uname -s)-$(uname -m)\" -o {{DOCKER.DOCKER_COMPOSE_PATH}}/docker-compose"
-          },
-          {
-            "type": "command",
-            "value": "chmod +x {{DOCKER.DOCKER_COMPOSE_PATH}}/docker-compose"
-          },
-          {
-            "type": "command",
-            "value": "docker-compose --version"
-          }
-        ],
-        "CentOS_7": [
-          {
-            "type": "skipCondition",
-            "value": "docker-compose --version"
-          },
-          {
-            "type": "packages",
-            "value": "python-pip"
-          },
-          {
-            "type": "command",
-            "value": "pip --version"
-          },
-          {
-            "type": "packages",
-            "value": "python-devel, libffi-devel, openssl-devel, glibc-devel, gcc, gcc-c++, make"
           },
           {
             "type": "command",

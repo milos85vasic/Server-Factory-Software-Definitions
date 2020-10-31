@@ -41,15 +41,15 @@
           },
           {
             "type": "packages",
-            "value": "epel-release, python-pip"
+            "value": "epel-release, python3, python3-pip"
           },
           {
             "type": "command",
-            "value": "pip --version"
+            "value": "pip3 --version"
           },
           {
             "type": "packages",
-            "value": "python-devel, libffi-devel, openssl-devel, glibc-devel, gcc, gcc-c++, make"
+            "value": "python3-devel, libffi-devel, openssl-devel, glibc-devel, gcc, gcc-c++, make"
           },
           {
             "type": "command",
