@@ -6,6 +6,10 @@
       "installationSteps": {
         "CentOS": [
           {
+            "type": "packages",
+            "value": "tar, bzip2"
+          },
+          {
             "type": "deploy",
             "value": "{{SYSTEM.HOME}}/Core/Utils:{{SERVER.SERVER_HOME}}/Utils"
           },
