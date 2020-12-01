@@ -19,7 +19,7 @@
           },
           {
             "type": "packages",
-            "value": "dnf-plugins-core, device-mapper-persistent-data, lvm2"
+            "value": "dnf-plugins-core, device-mapper-persistent-data, lvm2, grubby"
           },
           {
             "type": "command",
@@ -27,11 +27,7 @@
           },
           {
             "type": "packagesErase",
-            "value": "podman, buildah, nftables"
-          },
-          {
-            "type": "command",
-            "value": "grubby --update-kernel=ALL --args=\"systemd.unified_cgroup_hierarchy=0\""
+            "value": "podman, buildah, nftables, moby-engine"
           },
           {
             "type": "command",
@@ -39,7 +35,15 @@
           },
           {
             "type": "packages",
-            "value": "grubby, iptables, iptables-services, docker-ce, docker-ce-cli, containerd.io, telnet"
+            "value": "iptables, iptables-services, docker-ce, docker-ce-cli, containerd.io, telnet"
+          },
+          {
+            "type": "command",
+            "value": "grubby --update-kernel=ALL --args=\"systemd.unified_cgroup_hierarchy=0\""
+          },
+          {
+            "type": "reboot",
+            "value": "480"
           },
           {
             "type": "command",
