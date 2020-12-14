@@ -39,7 +39,7 @@
           },
           {
             "type": "packages",
-            "value": "iptables, iptables-services, docker-ce, docker-ce-cli, containerd.io, telnet"
+            "value": "iptables, iptables-services, docker-ce-3:19.03.0-3.*, docker-ce-cli-1:19.03.0-3.*, containerd.io, telnet"
           },
           {
             "type": "command",
