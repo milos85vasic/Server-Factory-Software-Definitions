@@ -1,6 +1,0 @@
-{
-  "includes": [
-    "Centos/Ca.json",
-    "Ubuntu/Ca.json"
-  ]
-}

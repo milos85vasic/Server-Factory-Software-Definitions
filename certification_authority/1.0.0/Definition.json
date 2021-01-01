@@ -1,0 +1,13 @@
+{
+  "definition": {
+    "group": "main",
+    "type": "software",
+    "version": "1.0.0",
+    "name": "certification_authority"
+  },
+  "includes": [
+    "Centos/Ca.json",
+    "Fedora/Ca.json",
+    "Ubuntu/Ca.json"
+  ]
+}

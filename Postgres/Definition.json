@@ -1,6 +1,0 @@
-{
-  "includes": [
-    "Centos/Postgres.json",
-    "Ubuntu/Postgres.json"
-  ]
-}

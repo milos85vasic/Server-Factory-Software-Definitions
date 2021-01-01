@@ -1,0 +1,12 @@
+{
+  "definition": {
+    "group": "main",
+    "type": "software",
+    "version": "1.0.0",
+    "name": "postgres"
+  },
+  "includes": [
+    "Centos/Postgres.json",
+    "Ubuntu/Postgres.json"
+  ]
+}

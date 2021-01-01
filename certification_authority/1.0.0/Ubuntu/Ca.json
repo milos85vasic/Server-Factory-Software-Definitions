@@ -1,4 +1,17 @@
 {
+  "overrides": {
+    "platform": {
+      "Ubuntu": {
+        "variables": {
+          "SERVER": {
+            "CERTIFICATION": {
+              "CA_BUNDLE": "ca-certificates.crt"
+            }
+          }
+        }
+      }
+    }
+  },
   "software": [
     {
       "name": "Certification Authority",
@@ -39,7 +52,7 @@
           },
           {
             "type": "deploy",
-            "value": "Definitions/Software/Ca/Configuration:{{SERVER.CERTIFICATION.HOME}}"
+            "value": "this@Configuration:{{SERVER.CERTIFICATION.HOME}}"
           },
           {
             "type": "command",

@@ -1,6 +1,0 @@
-{
-  "includes": [
-    "Centos/Redis.json",
-    "Ubuntu/Redis.json"
-  ]
-}

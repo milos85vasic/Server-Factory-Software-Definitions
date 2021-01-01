@@ -10,12 +10,20 @@
             "value": "docker-compose --version"
           },
           {
-            "type": "packages",
-            "value": "python-pip, python3-pip"
+            "type": "command",
+            "value": "apt update -y"
           },
           {
             "type": "command",
-            "value": "pip --version"
+            "value": "apt upgrade -y"
+          },
+          {
+            "type": "command",
+            "value": "apt autoremove -y"
+          },
+          {
+            "type": "packages",
+            "value": "python3, python3-pip"
           },
           {
             "type": "command",
@@ -23,11 +31,11 @@
           },
           {
             "type": "packages",
-            "value": "python2.7-dev, python3-dev, libffi-dev, libssl-dev, build-essential"
+            "value": "python3-dev, libffi-dev, libssl-dev, build-essential"
           },
           {
             "type": "command",
-            "value": "curl -L \"https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)\" -o {{DOCKER.DOCKER_COMPOSE_PATH}}/docker-compose"
+            "value": "curl -L \"https://github.com/docker/compose/releases/download/{{DOCKER.DOCKER_COMPOSE_VERSION}}/docker-compose-$(uname -s)-$(uname -m)\" -o {{DOCKER.DOCKER_COMPOSE_PATH}}/docker-compose"
           },
           {
             "type": "command",

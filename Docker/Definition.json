@@ -1,8 +1,0 @@
-{
-  "includes": [
-    "Centos/Docker.json",
-    "Centos/Compose.json",
-    "Ubuntu/Docker.json",
-    "Ubuntu/Compose.json"
-  ]
-}

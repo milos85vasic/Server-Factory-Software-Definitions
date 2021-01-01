@@ -6,8 +6,12 @@
       "installationSteps": {
         "CentOS": [
           {
+            "type": "packages",
+            "value": "tar, bzip2"
+          },
+          {
             "type": "deploy",
-            "value": "Core/Utils:{{SERVER.SERVER_HOME}}/Utils"
+            "value": "{{SYSTEM.HOME}}/Core/Utils:{{SERVER.SERVER_HOME}}/Utils"
           },
           {
             "type": "skipCondition",
@@ -26,8 +30,24 @@
             "value": "yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo"
           },
           {
+            "type": "command",
+            "value": "sh {{SERVER.SERVER_HOME}}/Utils/setenforce.sh"
+          },
+          {
+            "type": "packagesErase",
+            "value": "podman, buildah, nftables"
+          },
+          {
             "type": "packages",
-            "value": "docker-ce, docker-ce-cli, containerd.io, telnet"
+            "value": "iptables, iptables-services, docker-ce-3:19.03.14-3.*, docker-ce-cli-1:19.03.14-3.*, containerd.io, telnet"
+          },
+          {
+            "type": "command",
+            "value": "systemctl enable iptables"
+          },
+          {
+            "type": "command",
+            "value": "systemctl start iptables"
           },
           {
             "type": "command",
@@ -35,7 +55,7 @@
           },
           {
             "type": "command",
-            "value": "docker run hello-world"
+            "value": "docker run --rm hello-world"
           },
           {
             "type": "command",
@@ -43,11 +63,11 @@
           },
           {
             "type": "reboot",
-            "value": "120"
+            "value": "480"
           },
           {
             "type": "command",
-            "value": "docker run hello-world"
+            "value": "docker run --rm hello-world"
           }
         ]
       }
